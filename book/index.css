@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Architects+Daughter&family=Bungee+Shade&family=Caveat:wght@500&family=Comfortaa&family=Cormorant+Garamond:ital@1&family=Libre+Baskerville&family=Marck+Script&family=Mochiy+Pop+P+One&family=Shadows+Into+Light&family=Staatliches&display=swap");
+header {
+  font-family: "Marck Script", cursive;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  font-size: 16px;
+  box-shadow: 0 2.8px 2.2px rgb(218, 213, 213);
+ 
+}
+body {
+  font-family: "Marck Script", cursive;
+}
+.navbar {
+  text-align: center;
+  
+}
+.navbar a:hover
+{border-bottom:2px solid hsla(350, 100%, 88%, 0.329); }
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding-left: 8px;
+}
+
+.icons {
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.icons a i #cart{content:attr(data-count);}
+.icons a i {
+  padding-left: 5px;
+}
+header a i {
+  float: left;
+}
+
+.logo i {
+  display: none;
+}
+.body {
+  background-image: url("/flowerrr.jfif");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+.contright1 {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contright1 .contright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 400px;
+  border-radius: 40px 0px 0px 0px;
+  font-family: "Marck Script", cursive;
+}
+input::placeholder {
+  font-family: "Marck Script", cursive;
+}
+.login {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 400px;
+}
+.contright {
+  background-color: hsla(350, 100%, 88%, 0.329);
+  height: 100px;
+}
+#cart {
+  content: attr(value);
+  font-size:10px;
+  font-weight: bolder;
+  background:  hsla(350, 100%, 88%, 0.329);
+  border-radius: 50%;
+  top: -27px;
+  right: -4px;
+  position: relative;
+  opacity: 0.5;
+  
+}
+
+.login .contleft {
+  background-color: hsla(350, 100%, 88%, 0.329);
+}
+#products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+   
+}
+@media screen and (max-width: 523px) {
+  .navbar {
+    display: none; 
+    display: grid;
+    grid-template-columns: 1fr;
+    position: absolute;
+    top: 6vh;
+    text-align: center;
+    font-weight: 900;
+    background-color: hsla(350, 100%, 88%, 0.329);
+    height: 36vh;
+    opacity: 1;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    z-index: 1;
+    width: 15vh;
+    
+  }
+#products
+{display: grid;
+grid-template-columns: 1fr 1fr;}
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: flex-end;
+  }
+  .logo i {
+    display: inline;
+    margin-right: 37px;
+  }
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+}
+@media screen and (max-width:700px) {
+#products{display:grid;
+grid-template-columns: 1fr 1fr;}
+  
+}
+@media screen and (max-width: 600px) {
+  .contleft {
+    display: none;
+  }
+#products{display: grid;
+grid-template-columns: 1fr 1fr;}
+
+  .contright1 .contright {
+    height: 170px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0px 20px 0px;
+  }
+  .login {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .icons a i {
+    display: none;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+}
+@media screen  and (max-width:424px){
+  #products{
+    display: grid;
+    grid-template-columns: 1fr;}
+}
+.product_info img {
+  height: 200px;
+
+  object-fit: contain;
+}
+.product_disp{margin: 10px;
+  background-color:hsla(350, 100%, 88%, 0.329);
+border-radius: 20px 0px 0px 0px;}
+
+.product_info {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 7px;
+  align-items: center;
+  flex-direction: column;
+  
+}
+b{display: flex;
+padding-left: 10px;}
+button{background-color: transparent;
+border-radius: 3px;
+font-size: 9px;
+border:1px solid black;}
+.product_info img:hover{transform: scale(1.1);}
+/* yfyy */
+#heart
+{
+  font-size:10px;
+  font-weight: bolder;
+  background:  hsla(350, 100%, 88%, 0.329);
+  border-radius: 50%;
+  top: -27px;
+  right: -4px;
+  position: relative;
+  opacity: 0.5;}

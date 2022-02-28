@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <a href="#" class="logo">
+        <i class="bi bi-list" onclick="openMenu()"></i> Flower
+      </a>
+      <nav class="navbar" id="menu">
+        <a href=" ">Home</a>
+        <a href="#products">Products</a>
+        <a href=" ">About</a>
+        <a href=" ">Review</a>
+        <a href=" ">Contact</a>
+      </nav>
+      <div class="icons">
+        <a><i class="bi bi-heart-fill"></i></a>
+        <a><i class="bi bi-cart-fill"><span id="cart"></span></i></a>
+        <a href="#login" id="person"><i class="bi bi-person-fill"></i></a>
+      </div>
+    </header>
+    <div class="body"></div>
+    <!-- cards -->
+    <div id="products">
+      <div class="product_disp">
+        <div class="product_info">
+          <img src="/flowe2.jfif" />
+          <p>Dandellion</p>
+          <b> 15rs </b>
+          <button class="carts" id="carts">add to cart</button>
+        </div>
+      </div>
+
+      <div class="product_disp">
+        <div class="product_info">
+          <img src="/flowe2.jfif" />
+          <p>Dandellion</p>
+          <b> 45rs </b>
+          <button class="carts">add to cart</button>
+        </div>
+      </div>
+      <div class="product_disp">
+        <div class="product_info">
+          <img src="/flowe2.jfif" />
+          <p>Dandellion</p>
+          <b> 15rs </b>
+          <button class="carts">add to cart</button>
+        </div>
+      </div>
+      <div class="product_disp">
+        <div class="product_info">
+          <img src="/flowe2.jfif" />
+          <p>Dandellion</p>
+          <b> 15rs </b>
+          <button class="carts">add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="login" id="login">
+      <div class="contleft"></div>
+      <div class="contright1">
+        <div class="contright">
+          <!--input fields with javascript validations  -->
+          <h4>Sign up/log in</h4>
+          <div class="inputs">
+            <p>
+              Name :
+              <input
+                class="name"
+                id="name"
+                placeholder="Enter your good name"
+              />
+            </p>
+            <p>
+              Email :
+              <input
+                class="email"
+                id="email"
+                placeholder="Enter Email address"
+              />
+            </p>
+            <p>
+              Phone :
+              <input
+                class="phoneno"
+                id="phoneno"
+                placeholder="Enter mobile no."
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- hgjj -->
+
+    <script>
+      var count = 0;
+      var button = document.querySelectorAll(".carts");
+      for (var i = 0; i < button.length; i++) {
+          var display = document.getElementById("cart");
+          if(display===null){display.style.display="none";}
+          else{display.style.display="block"}
+        button[i].onclick = function () {
+          count++;
+          display.innerHTML = count;
+        };
+      }
+      
+
+      // var buttons=document.getElementsById('carts');
+      // var carts=buttons.addEventListener('click',()=>{var event=document.getElementById('cart').innerHTML=2; })
+      function openMenu(e) {
+        var nav = document.getElementById("menu");
+        if (nav.style.display === "none") {
+          nav.style.display = "block";
+        } else {
+          nav.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+  <!-- contact -->
+  <!-- cart -->
+  <!-- liked flowers -->
+</html>
