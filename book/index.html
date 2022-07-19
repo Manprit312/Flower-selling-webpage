@@ -21,7 +21,7 @@
       <nav class="navbar" id="menu">
         <a href=" ">Home</a>
         <a href="#products">Products</a>
-        <a href=" ">About</a>
+        <a href="#about_us">About</a>
         <a href=" ">Review</a>
         <a href=" ">Contact</a>
       </nav>
@@ -76,37 +76,51 @@
           <h4>Sign up/log in</h4>
           <div class="inputs">
             <p>
-              Name :
+               Full Name :
               <input
-                class="name"
+                
                 id="name"
                 placeholder="Enter your good name"
               />
+              <span class="name">enter your full name <i class="bi bi-exclamation-circle"></i></span>
             </p>
+
             <p>
               Email :
               <input
-                class="email"
+               
                 id="email"
                 placeholder="Enter Email address"
               />
+              <span class="email">enter your correct email<i class="bi bi-exclamation-circle"></i></span>
             </p>
             <p>
               Phone :
               <input
-                class="phoneno"
+               
                 id="phoneno"
                 placeholder="Enter mobile no."
               />
+             <span class="phone">enter your correct no.<i class="bi bi-exclamation-circle"></i></span>
             </p>
+            <button type="submit" onclick="fun()" id="but">submit</button>
           </div>
         </div>
       </div>
     </div>
     <!-- hgjj -->
 
+    <div class="about_us" id="about_us">
+     <div class="about_us_container">
+      <div class="body_container"><h2>About Us</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic blanditiis nulla maiores ea molestias perferendis quo, pariatur ab et placeat nemo odio vero commodi minima, laudantium, libero eius incidunt tempora!</p>
+      <button>read more</button></div>
+<div class="body_container"><img src="/flowerrr.jfif" alt="\pic"></div>
+     
+     </div>
+    </div>
     <script>
-      var count = 0;
+    var count = 0;
       var button = document.querySelectorAll(".carts");
       for (var i = 0; i < button.length; i++) {
           var display = document.getElementById("cart");
@@ -115,12 +129,29 @@
         button[i].onclick = function () {
           count++;
           display.innerHTML = count;
-        };
-      }
+        };}
+        
+        function fun(){
+           var phoneno = document.getElementById("phoneno").value.trim().toString();
+           var phone=/^[7-9]\d{9}/;
+           var phonenodet=document.querySelector(".phone").style;
+           var name=document.getElementById("name").value;
+           var named=name.toString();
+           var error=document.querySelector('.name').style;
+           if(named.length<3 ) {error.display = "inline"}
+           else{error.display="none"}
+           if(phoneno.length<10 || phone.test(phoneno)==false ||phoneno.length>10){phonenodet.display="inline";}
+           else{phonenodet.display = "none"}
+           var mail = document.getElementById("email").value.trim();
+           var email=document.querySelector('.email').style;
+          
+          var characters = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+           if (characters.test(mail)==false ){email.display="inline"}
+           else{email.display="none"}
+          
+        }
       
-
-      // var buttons=document.getElementsById('carts');
-      // var carts=buttons.addEventListener('click',()=>{var event=document.getElementById('cart').innerHTML=2; })
+      
       function openMenu(e) {
         var nav = document.getElementById("menu");
         if (nav.style.display === "none") {
@@ -129,7 +160,7 @@
           nav.style.display = "none";
         }
       }
-    </script>
+        </script>
   </body>
   <!-- contact -->
   <!-- cart -->
